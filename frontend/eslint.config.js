@@ -12,5 +12,8 @@ module.exports = [
         __dirname: "readonly",
       },
     },
+    rules: {
+      "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    },
   },
 ];
