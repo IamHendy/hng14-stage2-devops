@@ -174,9 +174,8 @@ jobs:
         uses: aquasecurity/trivy-action@master
         with:
           image-ref: localhost:5000/api:latest
-          format: sarif
-          output: trivy-api.sarif
-          severity: CRITICAL
+          format: table
+           severity: CRITICAL
           exit-code: "1"
           ignore-unfixed: true
            scanners: vuln
@@ -185,8 +184,7 @@ jobs:
         uses: aquasecurity/trivy-action@master
         with:
           image-ref: localhost:5000/worker:latest
-          format: sarif
-          output: trivy-worker.sarif
+          format:  table
           severity: CRITICAL
           exit-code: "1"
           ignore-unfixed: true
@@ -196,8 +194,7 @@ jobs:
         uses: aquasecurity/trivy-action@master
         with:
           image-ref: localhost:5000/frontend:latest
-          format: sarif
-          output: trivy-frontend.sarif
+          format: table
           severity: CRITICAL
           exit-code: "1"
           ignore-unfixed: true
