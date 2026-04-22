@@ -1,5 +1,5 @@
 # ── Stage 1: Builder ──────────────────────────────────────────
-FROM node:18-slim AS builder
+FROM node:20-slim AS builder
 
 WORKDIR /app
 
@@ -10,7 +10,7 @@ RUN npm ci --omit=dev
 
 
 # ── Stage 2: Final image ──────────────────────────────────────
-FROM node:18-slim
+FROM node:20-slim
 
 WORKDIR /app
 
