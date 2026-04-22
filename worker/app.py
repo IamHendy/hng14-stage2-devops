@@ -9,6 +9,7 @@ r = redis.Redis(
     password=os.getenv("REDIS_PASSWORD", None)
 )
 
+
 running = True
 
 
